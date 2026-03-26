@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useRef, useEffect } from "react";
@@ -22,26 +23,39 @@ export function Navbar() {
   const isYearsActive = pathname === "/years/2026" || pathname === "/years/2025";
 
   return (
-    <nav className="border-b border-white/10 bg-black px-6 py-4">
+    <nav className="bg-black px-4 py-4 sm:px-6 sm:py-6">
       <div className="flex items-center">
         <Link
           href="/"
-          className="text-white font-semibold text-lg tracking-wide hover:text-zinc-300 transition-colors"
+          className="inline-flex items-center"
         >
-          HACK SHACK
+          <Image
+            src="/logo.png"
+            alt="Hack Shack logo"
+            width={420}
+            height={96}
+            className="h-10 w-auto sm:h-16"
+            priority
+          />
         </Link>
 
-        <ul className="ml-auto flex items-center gap-8 text-sm">
+        <ul className="ml-auto flex items-center gap-4 text-xs font-mono tracking-wide sm:gap-8 sm:text-sm">
           <li className="relative" ref={dropdownRef}>
             <button
               type="button"
               onClick={() => setYearsOpen(!yearsOpen)}
-              className={`flex items-center gap-1 text-zinc-200 hover:text-white transition-colors ${
+              className={`group flex items-center gap-2 text-zinc-200 hover:text-white transition-colors ${
                 isYearsActive ? "font-semibold" : ""
               }`}
             >
               Years
-              <span className="text-sm">{yearsOpen ? "▲" : "▼"}</span>
+              <span
+                className={`flex h-3 w-3 items-center justify-center text-[6px] leading-none text-zinc-400 transition-transform duration-200 group-hover:text-zinc-200 ${
+                  yearsOpen ? "rotate-180" : "rotate-0"
+                }`}
+              >
+                ▼
+              </span>
             </button>
 
             {yearsOpen && (

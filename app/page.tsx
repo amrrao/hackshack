@@ -2,8 +2,8 @@ import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/ui/termina
 
 export default function Home() {
   return (
-    <div className="flex min-h-[calc(100vh-73px)] w-full items-center justify-center bg-black px-4 py-6 sm:px-6 sm:py-10">
-      <Terminal className="max-w-md border-white/10 bg-black text-white sm:max-w-2xl [&_pre]:whitespace-pre-wrap [&_code]:overflow-visible [&_code]:break-words">
+    <div className="flex min-h-[calc(100dvh-96px)] w-full items-center justify-center bg-black px-4 sm:min-h-[calc(100dvh-112px)] sm:px-6">
+      <Terminal className="-translate-y-12 max-w-md border-white/10 bg-black text-white sm:-translate-y-14 sm:max-w-2xl [&_pre]:whitespace-pre-wrap [&_code]:overflow-visible [&_code]:break-words">
         <TypingAnimation
           duration={35}
           className="text-[13px] text-blue-200 sm:text-sm"
@@ -15,7 +15,7 @@ export default function Home() {
           HACK SHACK
         </AnimatedSpan>
 
-        <AnimatedSpan className="mt-4 mb-30 text-[13px] leading-relaxed text-zinc-300 sm:text-lg">
+        <AnimatedSpan className="mt-4 text-[13px] leading-relaxed text-zinc-300 sm:text-lg">
           <p>
             Hack Shack is a weekend-long builder retreat for Columbia&apos;s
             highest signal founders and most technical builders. The challenge
