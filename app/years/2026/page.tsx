@@ -13,13 +13,13 @@ export default function Year2026() {
           Sponsors
         </h2>
         <ul className="grid gap-3 md:grid-cols-2">
-          <li className="rounded-lg border border-white/15 bg-white/5 p-4 text-zinc-100">
+          <li className="rounded-md border border-white/15 bg-white/5 p-4 text-zinc-100">
             Columbia in Tech
           </li>
-          <li className="rounded-lg border border-white/15 bg-white/5 p-4 text-zinc-100">
+          <li className="rounded-md border border-white/15 bg-white/5 p-4 text-zinc-100">
             J20 Ventures
           </li>
-          <li className="rounded-lg border border-white/15 bg-white/5 p-4 text-zinc-100">
+          <li className="rounded-md border border-white/15 bg-white/5 p-4 text-zinc-100">
             Whop
           </li>
         </ul>
