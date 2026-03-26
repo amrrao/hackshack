@@ -19,6 +19,9 @@ export default function Year2026() {
           <li className="rounded-lg border border-white/15 bg-white/5 p-4 text-zinc-100">
             J20 Ventures
           </li>
+          <li className="rounded-lg border border-white/15 bg-white/5 p-4 text-zinc-100">
+            Whop
+          </li>
         </ul>
       </section>
     </div>
